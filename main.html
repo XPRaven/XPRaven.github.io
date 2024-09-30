@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bibliothek</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC" rel="stylesheet">
+</head>
+<body class="IM_Fell_DW_Pica">
+<div id="center-div">
+    <h1 class="IM_Fell_DW_Pica_SC">Suche</h1>
+    <div>
+        <label for="search">
+            <input type="search" id="search">
+        </label>
+    </div>
+    <div>
+        <label for="go">
+            <input type="button" id="go" value="Suchen" class="IM_Fell_DW_Pica_SC" style="font-size: 1.2em" onclick="{location.href=document.getElementById('search').value + '.html'}">
+        </label>
+    </div>
+</div>
+</body>
+<style>
+    #center-div {
+        text-align: center;
+        margin-top: 35vh;
+        margin-bottom: 65vh;
+    }
+    #search {
+        max-width: 500px;
+        width: 30vw;
+        height: 30px;
+    }
+    #go {
+        margin-top: 5px;
+        height: 35px;
+        width: 100px;
+    }
+    body {
+        background: lightgray;
+    }
+
+    .IM_Fell_DW_Pica {font-family: "IM Fell DW Pica", sans-serif}
+
+    .IM_Fell_DW_Pica_SC {font-family: "IM Fell DW Pica SC", sans-serif}
+</style>
+
+<script>
+    document.getElementById('search').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            location.href= document.getElementById('search').value + '.html'
+        }
+    });
+</script>
+</html>

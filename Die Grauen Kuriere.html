@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Grauen Kuriere</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="note">
+    <h3>Anmerkungen zum Format</h3>
+    Dieses Dokument kann seinen enzyklopädischen Charakter behalten, es sollten aber Derivate mit folgenden Bedenken erstellt werden:<br>
+    Die DGK sind für absolute Geheimhaltung der Organisationsstruktur, darum können einige Änderungen vorgenommen werden
+    <ul>
+        <li>Da die Organisation schon seit einer langen Zeit besteht, sollte es schriftliche Aufzeichnungen über alles Mögliche geben. Da dies der Geheimhaltung und Datensicherheit widerspricht,
+            sollten die Informationen nur den Ältesten zugänglich sein und bei Bedarf mit Erlaubnis auch für andere Kuriere und Personen</li>
+        <li>Wenn nun angenommen wird, dass alle Ältesten alle Informationen haben, muss natürlich vor Gedankenlesern geschützt werden. Hier könnte man ähnliche Prinzipien wie in der Programmierung anwenden:
+            Sobald Älteste ernannt werden, wird ihr Verstand transformiert, sodass er genau die gleichen Ergebnisse liefert und effektiv nichts an der Denkweise der Person ändert, sondern die Methoden und Abläufe des Denkens so umschreibt, dass sie für andere unverständlich werden.
+            Diese Technik wäre vielleicht auch mit asynchronen Schlüsseln (ähnlich einem Seed) geschützt, sodass jemand, der herausfindet, wie die Transformation funktioniert, sie nur äußerst unwahrscheinlich identisch wiederholen könnte.
+            Das Wissen über den Ablauf der Transformation ist natürlich den Ältesten vorbehalten.</li>
+        <li>Kuriere hoher Ränge werden möglicherweise auch in dieDatensicherheit mit einbezogen (Transformation auf niedrigerer Stufe als Älteste?)</li>
+    </ul>
+    Unter der Annahme, dass Kuriere nur selten physische Informationen erstellen und sogar aktiv vernichten (wie wird mit Leuten umgegangen, die z.B. Informationen gelesen haben? Erinnerungen löschen? Töten?), gäbe es nur wenige Dokumente zu den DGK.
+    Folglich sollten die Informationen zu den DGK nicht gesammelt wie in diesem Format vorliegen, sondern spärlich und durch sehr viele Dokumente zusammengestellt sein. Diese/s Anthologie/Kompendium würde sich im HTML-Format durch viele einzelne Dateien abbilden,
+    die möglicherweise miteinander verlinkt sind (entweder durch Links in der Datei selbst oder durch Links in einem Sammelband), die sich nur durch Suchen finden lassen ("Hierzu siehe 'Eisenbarts Geschichten'" -> dgk.com/eisenbarts_geschichten.html) und Dateien,
+    die gar nicht erwähnt werden, aber trotzdem existieren.<br>
+    <i>(Hier müsste man dann das gesamte Verzeichnis ohne Rücksicht hosten, aber ohne Zugriff auf einen Index oder z.B. file:///C:/)</i>
+</div>
+
+<div id="TOC">
+    <details open>
+    <summary><strong>Inhaltsverzeichnis</strong></summary>
+        <ul>
+            <li><a href="#einleitung">Einleitung</a>
+                <ul>
+                    <li><a href="#name">Name</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                </ul>
+            </li>
+            <li><a href="#geschichte">Geschichte</a>
+                <ul>
+                    <li><a href="#ursprünge">Ursprünge</a></li>
+                    <li><a href="#gründer">Gründer</a></li>
+                    <li><a href="#historischer-kontext">Historischer Kontext</a></li>
+                    <li><a href="#geschichtliche-ereignisse">Geschichtliche Ereignisse</a></li>
+                </ul>
+            </li>
+            <li><a href="#organisationsstruktur">Organisationsstruktur</a>
+                <ul>
+                    <li><a href="#ränge-und-titel">Ränge und Titel</a></li>
+                    <li><a href="#aufträge">Aufträge</a></li>
+                    <li><a href="#führung">Führung</a></li>
+                </ul>
+            </li>
+            <li><a href="#mitglieder">Mitglieder</a>
+                <ul>
+                    <li><a href="#wichtige-und-nennenswerte-mitglieder">Wichtige und nennenswerte Mitglieder</a></li>
+                    <li><a href="#beitrittsbedingungen">Beitrittsbedingungen</a></li>
+                    <li><a href="#demographie">Demographie</a></li>
+                </ul>
+            </li>
+            <li><a href="#standorte">Standorte</a>
+                <ul>
+                    <li><a href="#hauptquartier">Hauptquartier</a></li>
+                    <li><a href="#andere-orte">Andere Orte</a></li>
+                </ul>
+            </li>
+            <li><a href="#organisationsstruktur">Organisationsstruktur</a>
+                <ul>
+                    <li><a href="#ränge-und-titel">Ränge und Titel</a></li>
+                    <li><a href="#aufträge">Rollen und Aufgaben</a></li>
+                    <li><a href="#führung">Führung</a></li>
+                </ul>
+            </li>
+            <li><a href="#symbole-und-insignien">Symbole und Insignien</a>
+                <ul>
+                    <li><a href="#emblem">Emblem</a></li>
+                    <li><a href="#motto">Motto</a></li>
+                    <li><a href="#farben">Farben</a></li>
+                </ul>
+            </li>
+            <li><a href="#werte">Werte</a>
+                <ul>
+                    <li><a href="#prinzipien">Prinzipien</a></li>
+                    <li><a href="#gesetze-und-regeln">Gesetze und Regeln</a></li>
+                </ul>
+            </li>
+            <li><a href="#allianzen-und-feinde">Allianzen und Feinde</a>
+                <ul>
+                    <li><a href="#verbündete">Verbündete</a></li>
+                    <li><a href="#feinde-und-rivalen">Feinde und Rivalen</a></li>
+                </ul>
+            </li>
+            <li><a href="#technologie-und-ressourcen">Technologie und Ressourcen</a>
+                <ul>
+                    <li><a href="#ausrüstung">(Spezielle) Ausrüstung</a></li>
+                    <li><a href="#ressourcen">Ressourcen</a></li>
+                </ul>
+            </li>
+            <li><a href="#kultur-und-traditionen">Kultur und Traditionen</a>
+                <ul>
+                    <li><a href="#rituale-und-zeremonien">Rituale und Zeremonien</a></li>
+                    <li><a href="#sprache-und-kommunikation">Sprache und Kommunikation</a></li>
+                    <li><a href="#alltag">Alltag</a></li>
+                </ul>
+            </li>
+            <li><a href="#errungenschaften">Errungenschaften</a>
+                <ul>
+                    <li><a href="#auszeichnungen-und-ehrungen">Auszeichnungen und Ehrungen</a></li>
+                    <li><a href="#bedeutende-errungenschaften">Bedeutende Errungenschaften</a></li>
+                </ul>
+            </li>
+            <li><a href="#herausforderungen-und-kontroversen">Herausforderungen und Kontroversen</a>
+                <ul>
+                    <li><a href="#interne-konflikte">Interne Konflikte</a></li>
+                    <li><a href="#herausforderungen">Herausforderungen</a></li>
+                    <li><a href="#skandale">Skandale</a></li>
+                    <li><a href="#kritik">Kritik</a></li>
+                </ul>
+            </li>
+            <li><a href="#pläne-und-ziele">Pläne und Ziele</a>
+                <ul>
+                    <li><a href="#gegenwärtige-projekte">Gegenwärtige Projekte</a></li>
+                    <li><a href="#zukunftsvision">Zukunftsvision</a></li>
+                </ul>
+            </li>
+            <li><a href="#anhang">Anhang</a>
+                <ul>
+                    <li><a href="#glossar">Glossar</a></li>
+                    <li><a href="#karten">Karten</a></li>
+                    <li><a href="#zeitleiste">Zeitleiste</a></li>
+                </ul>
+            </li>
+            <li><a href="#referenzen">Referenzen</a>
+            <ul>
+                <li><a href="#quellen">Quellen</a></li>
+                <li><a href="#siehe-auch">Siehe auch</a></li>
+            </ul>
+            </li>
+        </ul>
+    </details>
+</div>
+
+<img id="image" src="Wereraven_5e.webp" alt="An image of a were-raven">
+
+<div id="content">
+    <h1>Die Grauen Kuriere</h1>
+
+    <!--region Einleitung-->
+    <h2 id="einleitung">Einleitung</h2>
+    Die Grauen Kuriere bilden eine geheimnisvolle Organisation, die ein transnationales Kommunikationsnetz aufgestellt hat.
+    <h3 id="name">Name</h3>
+    Die Mitglieder der Grauen Kuriere sind dem Namen entsprechend Kuriere. Die Bezeichnung <q>grau</q> stammt dabei von der absoluten Neutralität,
+    die die Organisation als Ganzes aber auch die Kuriere individuell einhalten.
+    <h3 id="mission">Mission</h3>
+    Die Mission der Organisation lässt sich recht einfach zusammenfassen: Ein zuverlässiges, sicheres und diskretes Kommunikationsnetz für
+    Personen in Machtpositionen wie z.B. Staatschefs, hohe Regierungsmitarbeiter und Schlüsselpersonen anderer Organisationen zu schaffen.
+    <!--endregion-->
+    <!--region Geschichte-->
+    <h2 id="geschichte">Geschichte</h2>
+    <h3 id="ursprünge">Ursprünge</h3>
+    Die Grauen Kuriere wurden ursprünglich von einer kleinen Gruppe aus Wer-Raben gegründet. Während sich die Organisation langsam einen Namen machte,
+    gab es auch immer mehr Aufträge und nach einiger Zeit fingen Leute an, sich für die Organisation zu bewerben. So wuchs die Organisation langsam
+    aber stetig immer weiter, bis sie sich zu der transnationalen Organisation von heute entwickelt hatte.<br>
+    Mehr zu den Mitgliedern findet sich unter <a href="#mitglieder">Mitglieder</a>.
+    <h4 id="gründer">Gründer</h4>
+    <h4 id="historischer-kontext">Historischer Kontext</h4>
+    <h3 id="geschichtliche-ereignisse">Geschichtliche Ereignisse</h3>
+    <!--endregion-->
+    <!--region Organisationsstruktur-->
+    <h2 id="organisationsstruktur">Organisationsstruktur</h2>
+    <h3 id="ränge-und-titel">Ränge und Titel</h3>
+        <ol>
+            <li>
+                Ältester:<br>
+                Die Ältesten sind mit der Leitung der gesamten Organisation beauftragt. Sie reagieren auf Geschehnisse in der Welt und planen das weitere Vorgehen der Organisation als Gesamtheit.
+                Genau wie alle anderen Kunden, nutzen die Ältesten Kuriere für ihre eigenen Botschaften und stellvertretend für diplomatische Missionen. Die Ältesten nehmen sich nicht von den Regeln aus,
+                weshalb auch einfache Kuriere manchmal ihre Botschaften überbringen, ganz allein abgängig vom Wert der Übermittlung. Da die Nachrichten in der Regel aber recht wichtig sind,
+                sind es meistens zumindest Express-Kuriere, die diesen Dienst übernehmen.<br>
+                Den Rang eines Ältesten kann man eher unabhängig von den Kurierrängen erreichen, da diese sich auf Führungsfähigkeiten spezialisieren, nicht Kurierdienst. Ein aufstrebender Ältester
+                muss zwar mindestens den Rang des Kuriers erreicht haben, aber danach hängt die Beförderung von Empfehlungen höherrangiger Kuriere ab: Es müssen mindestens fünf Express-Kuriere,
+                drei Meisterkuriere oder ein Sonderkurier die Beförderung vorschlagen, damit der Anwärter bei den anderen Ältesten eine <a href="#rituale-und-zeremonien">Prüfung</a> ablegen darf.
+            </li>
+            <li>
+                Sonderkurier:<br>
+                Sonderkuriere sind die Erfahrensten der Kuriere. Sie sind keinen anderen Kurieren unterstellt, deswegen können sie jede Art von Auftrag annehmen und erstatten nur noch den Ältesten Bericht. <!-- Sonderkuriere müssen nicht die Erfahrensten sein (s. Satoru Gojo); sie sind sehr gut im Einschätzen von Gefahren, Wegen, etc. und sehr schnell -> Fähigkeit kommt vor reiner Arbeitsdauer -->
+                Selbst diese Berichterstattung erfolgt nach eigenem Ermessen oder auf Wunsch eines Ältesten, da die Sonderkuriere ihre Aufgaben völlig ohne Aufsicht erfüllen können und ihr Status meist
+                nur zur Planung eines Vorgehens der Organisation benötigt wird.<br>
+            </li>
+            <li>
+                Meisterkurier:<br>
+                Meisterkuriere sind erfahrene Kuriere, die sich um die Anliegen anderer Kuriere kümmern, falls sie gerade nicht selbst einen Auftrag haben.
+                Sie dürfen erweiterte Aufträge bis Stufe <b>20</b> annehmen.<br>
+                Meisterkuriere können auch zu Ausbildern ernannt werden: So werden sie zeitweise von ihren Pflichten entbunden, um sich um den angehenden Kurier zu kümmern.
+            </li>
+            <li>
+                Express-Kurier:<br>
+                Kuriere dieses Rangs haben schon einige Erfahrung gesammelt und werden oft für zeitkritische Aufträge eingesetzt, da sie das Können für den Transport haben,
+                aber nicht notwendigerweise dieselbe Expertise für Notfälle wie Meisterkuriere.
+                Express-Kuriere dürfen erweiterte Aufträge bis Stufe <b>15</b> annehmen.<br>
+                Ein Express-Kurier kann ähnlich wie ein Meisterkurier die Ausbildertätigkeit aufnehmen, darf einen Angehenden Kurier eigenständig jedoch nur bis zur Ernennung zum Läufer bringen.
+                An diesem Punkt wird ein Meisterkurier als vollwertiger Ausbilder zugeordnet, der die Läuferprüfung abnimmt und die weitere Ausbildung durchführt. Sollte die Läuferprüfung scheitern,
+                bleibt der Express-Kurier so lange Ausbilder, bis die Ausbildung abgebrochen wird oder die Prüfung bestanden ist.
+            </li>
+            <li>
+                Kurier:<br>
+                Der niedrigste Rang der voll ausgebildeten Kuriere. Allgemein übernehmen diese Kuriere
+                alle Standard-Aufträge und bilden die grundlegende Arbeitskraft der Organisation, die den höherrangigen ihre ungehinderte Arbeit ermöglicht.<br>
+                Sie dürfen erweiterte Aufträge bis Stufe <b>4</b> annehmen.
+            </li>
+            <li>
+                Läufer:<br>
+                Angehende Kuriere können von ihrem Ausbilder in den Rang des Läufers gehoben werden. Läufer dürfen eigenständig Aufträge ausführen, die ihnen von ihrem
+                Ausbilder zugewiesen werden. Diese bestehen in der Regel aus eher unkritischen Lieferungen auf kurzer Distanz, damit die Läufer ungefährlich Erfahrung sammeln können.
+                In einigen Fällen dürfen Läufer Aufträge für Schnelllieferungen annehmen.
+            </li>
+            <li>
+                Angehender Kurier:<br>
+                Angehende Kuriere haben noch kaum etwas von der Kurierstätigkeit gesehen. Sie dürfen keine eigenen Aufträge durchführen und agieren stattdessen unterstützende für ihren Ausbilder,
+                in der Regel bei Aufträgen bis Stufe <b>5</b>.
+            </li>
+        </ol>
+    <h4>Prüfungen und Disziplinarmaßnahmen</h4>
+    Für Disziplinarmaßnahmen und Kontrollen anderer Kuriere werden andere, höherrangige Kuriere ernannt (außer für Sonderkuriere), die die Verfahren durchführen.<br>
+    Diese Ordnung gilt auch für die Rangerhöhungsprüfungen.<br>
+    Die Zuständigkeitshierarchie sieht wie folgt aus:
+    <ul>
+        <li>Für Angehende Kuriere und Läufer ist der zugewiesene Ausbilder zuständig.</li>
+        <li>Für normale Kuriere sind Express-Kuriere zuständig.</li>
+        <li>Für Express-Kuriere sind Meisterkuriere zuständig.</li>
+        <li>Für Meisterkuriere sind Sonderkuriere zuständig.</li>
+        <li>Sonderkuriere kontrollieren Sonderkuriere.</li>
+    </ul>
+    Um für eine Rangerhöhungsprüfung zugelassen zu werden, muss ein Kurier von ranghöheren Kurieren vorgeschlagen werden. Die Prüfung darf nicht von dem vorschlagenden Kurier abgenommen werden.
+    Ein Kurier kann einen anderen Kurier um den Vorschlag bitten, was bedeutet, dass sich derjenige Kurier die Arbeit des Anwärters ansieht, um sich eine Meinung zu bilden.
+    Die Ordnung sieht wie folgt aus:
+    <ul>
+        <li>
+            Ein Angehender Kurier kann sich bei einem beliebigen Kurier bewerben, welcher die Bewerbung dann für die Findung eines Ausbilders an einen Meisterkurier weiterreicht.<br>
+            Der Angehende Kurier kann auch einen Kurier direkt bitten, der Ausbilder zu sein, wobei der gefragte Kurier immer noch die Anforderungen eines Ausbilders erfüllen muss,
+            d.h. er muss Express-Kurier oder Meisterkurier sein.
+        </li>
+        <li>Ein normaler Kurier muss von zwei Express-Kurieren, einem Meisterkurier oder einem Sonderkurier vorgeschlagen werden.</li>
+        <li>Ein Express-Kurier muss von einem Meisterkurier oder einem Sonderkurier vorgeschlagen werden.</li>
+        <li>Ein Meisterkurier muss von zwei Meisterkurieren oder einem Sonderkurier vorgeschlagen werden.</li>
+    </ul>
+    <h3>Fertigkeiten</h3>
+    Zusätzlich zum Rang eines Kuriers gibt es unterschiedliche Merkmale, die die Fertigkeiten eines Kuriers abbilden. Diese Fertigkeiten eignen sich für spezielle Einsatzgebiete.
+    Ein Kurier kann keine bis alle dieser Merkmale besitzen. Die Merkmale sind grob in drei Stufen eingeteilt: grundlegend, fortgeschritten und meisterhaft.<br>
+    Da diese Merkmale eher grob abgeschätzt werden, dienen sie eher einer Selbsteinschätzung der Kuriere für die Frage, ob sie für einen Auftrag geeignet sind.
+    <ul>
+        <li>
+            Geist:<br>
+            Der Kurier versteht, sich bedeckt zu halten. Für normale Kreaturen kann es so wirken, als würde der Kurier beim Sender verschwinden und erst beim Empfänger wieder auftauchen.
+        </li>
+        <li>
+            Phönix:<br>
+            Der Kurier ist in der Lage, an Orten zu überleben, die von Naturkatastrophen oder magischen Effekten heimgesucht wurden oder werden. Er kann in fast jeder Umgebung überleben.
+        </li>
+        <li>
+            Schildkröte:<br>
+            Der Kurier kann mit Widerstand durch andere Wesen umgehen und ist resilient gegenüber nicht-natürlichen Angriffen.
+        </li>
+        <li>
+            Kunsthandwerker:<br>
+            Der Kurier kann magische und nicht-magische Artefakte sicher transportieren, ohne dabei sich selbst oder andere mit möglichen Nebeneffekten zu gefährden.
+        </li>
+        <li>
+            Tunnel:<br>
+            Der Kurier kann einen Empfänger präzise und an den abgelegensten Orten erreichen. (Besonders häufig für "Suchen und Liefern"-Aufträge eingesetzt, s.u.)
+        </li>
+        <li>
+            Aquarius:<br>
+            Der Kurier kann mit Lieferungen über, durch oder unter Wasser umgehen.
+        </li>
+        <li>
+            Universalist:<br>
+            Kuriere mit diesem Merkmal haben sich alle Merkmale angeeignet, sodass sie problemlos in jeder Situation eingesetzt werden können.
+        </li>
+    </ul>
+    <h3 id="aufträge">Aufträge</h3>
+        <!--Wie definiert sich ein Standard-Auftrag-->
+        <!--Wie werden Aufträge tatsächlich verteil?-->
+        Um die Stufe eines erweiterten Auftrags zu ermitteln, werden für die unterschiedlichen Aspekte des Auftrags Punkte vergeben, die am Ende miteinander addiert werden.
+        Aufträge einer gegebenen Stufe dürfen nur von Kurieren ausgeführt werden, die entsprechend ihrem Rang die nötige Freigabe haben.
+        <ul>
+            <li><strong>Distanzlieferungen</strong>
+                <ul>
+                    <li>
+                        <em>Kontinental-Lieferung:</em><br>
+                        Eine Kontinental-Lieferung kann zu jedem Ort innerhalb desselben Kontinents oder einem ähnlichen Maßstab geliefert werden.<br>
+                        <b>5</b> Punkte
+                    </li>
+                    <li>
+                        <em>Langstrecken-Lieferung:</em><br>
+                        Diese Art von Lieferung geht in der Regel über die Grenzen des Kontinents hinaus.<br>
+                        <b>7</b> Punkte
+                    </li>
+                    <li>
+                        <em>Allstrecken-Lieferung:</em><br>
+                        Eine Allstrecken-Lieferung kann zu absolut jedem Ort geliefert werden. Diese Lieferungen werden meist von Meisterkurieren oder Sonderkurieren durchgeführt,
+                        da alle anderen Arten von Kurieren Wochen und vielleicht Monate mit solch einem Auftrag beschäftigt wären.<br>
+                        <b>10</b> Punkte
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Zeitkritische Lieferungen</strong>
+                <ul>
+                    <li>
+                        <em>Schnelllieferung:</em><br>
+                        Schnelllieferungen sollten schnellstens am Ziel ankommen, sind aber in der Regel inhaltlich eher unkritisch. Auf kurze Distanzen und unter Aufsicht eines
+                        Ausbilders können diese Lieferungen manchmal sogar von Läufern übernommen werden.<br>
+                        <b>2</b> Punkte
+                    </li>
+                    <li>
+                        <em>Expresslieferung:</em><br>
+                        Eine Expresslieferung muss dringend zum Zielort, der Kurier kann sich aber auch ein wenig Verzug erlauben. Diese Lieferungen werden dem Namen entsprechend
+                        meist von Express-Kurieren überbracht.<br>
+                        <b>6</b> Punkte
+                    </li>
+                    <li>
+                        <em>Sofortlieferung:</em><br>
+                        Eine Sofortlieferung muss so schnell wie möglich am Zielort ankommen, besser noch wäre sie schon längst dort.<br>
+                        <b>10</b> Punkte
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Lieferungen in feindlicher Umgebung</strong>
+                <ul>
+                    <li>
+                        <em>Kriegslieferung:</em><br>
+                        Eine Kriegslieferung wird in oder durch ein aktives Kriegsgebiet gebracht. Dabei muss der Kurier mit Präventivschlägen der anwesenden Parteien gegen sich selbst rechnen.<br>
+                        <b>4</b> Punkte
+                    </li>
+                    <li>
+                        <em>Feindgebiet-Lieferung:</em><br>
+                        Eine Feindgebiet-Lieferung wird in oder durch das Territorium einer aktiv feindlichen Gruppe entweder gegenüber den Kurieren oder dem Auftraggeber gebracht.
+                        Der Kurier muss damit rechnen, bei Kontakt sofort verfolgt und angegriffen zu werden.<br>
+                        <b>6</b> Punkte
+                    </li>
+                    <li>
+                        <em>Erwartete Lieferung:</em><br>
+                        Diese Art von Lieferung wird entweder direkt zu einer feindlich gesinnten Person gebracht oder es ist mit einem Hinterhalt bei der Überbringung zu rechnen.
+                        Diese Aufträge sollten mindestens von einem Meisterkurier ausgeführt werden.<br>
+                        <b>8</b> Punkte
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Sonstige Formen</strong>
+                <ul>
+                    <li>
+                        <em>Suchen und Liefern:</em><br>
+                        Bei dieser Lieferung ist die Position des Empfängers nicht bekannt, daher hat diese Lieferung keine Punktzahl. Basierend auf den anderen Kriterien wird die Punktzahl erstellt
+                        und dann einem Kurier zugeordnet. Sollte der Kurier nicht in der Lage sein, den Empfänger zu finden, kann er aufgeben und die Sendung hochreichen, d.h. ein Kurier mit
+                        nächsthöherem Rang erhält den Auftrag. Dieser Prozess wiederholt sich so lange, bis ein Sonderkurier urteilt, dass die Sendung nicht zugestellt werden kann.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    <h3 id="führung">Führung</h3>
+    <!--endregion-->
+    <!--region Mitglieder-->
+    <h2 id="mitglieder">Mitglieder</h2>
+    <h3 id="wichtige-und-nennenswerte-mitglieder">Wichtige und nennenswerte Mitglieder</h3>
+    <h3 id="beitrittsbedingungen">Beitrittsbedingungen</h3>
+    <h3 id="demographie">Demographie</h3>
+    <!--endregion-->
+    <!--region Standorte-->
+    <h2 id="standorte">Standorte</h2>
+    <h3 id="hauptquartier">Hauptquartier</h3>
+    <h3 id="andere-orte">Andere Orte</h3>
+    <!--endregion-->
+    <!--region Symbole und Insignien-->
+    <h2 id="symbole-und-insignien">Symbole und Insignien</h2>
+    <h3 id="emblem">Emblem</h3>
+    <h3 id="motto">Motto</h3>
+    <h3 id="farben">Farben</h3>
+    <!--endregion-->
+    <!--region Werte-->
+    <h2 id="werte">Werte</h2>
+    <h3 id="prinzipien">Prinzipien</h3>
+    <h3 id="gesetze-und-regeln">Gesetze und Regeln</h3>
+    <!--endregion-->
+    <!--region Allianzen und Feinde-->
+    <h2 id="allianzen-und-feinde">Allianzen und Feinde</h2>
+    <h3 id="verbündete">Verbündete</h3>
+    <h3 id="feinde-und-rivalen">Feinde und Rivalen</h3>
+    <!--endregion-->
+    <!--region Technologie und Ressourcen-->
+    <h2 id="technologie-und-ressourcen">Technologie und Ressourcen</h2>
+    <h3 id="ausrüstung">(Spezielle) Ausrüstung</h3>
+    Herzstein
+    <h3 id="ressourcen">Ressourcen</h3>
+    <!--endregion-->
+    <!--region Kultur und Traditionen-->
+    <h2 id="kultur-und-traditionen">Kultur und Traditionen</h2>
+    <h3 id="rituale-und-zeremonien">Rituale und Zeremonien</h3>
+    <h3 id="sprache-und-kommunikation">Sprache und Kommunikation</h3>
+    Die Grauen Kuriere verwenden eine Sprache, die ursprünglich von den Gründern entwickelt wurde und entsprechend eher natürlich für Rabenvögel ist.
+    Mit der Aufnahme andersrassiger Mitglieder hat sich eine abgewandelte Form entwickelt, die zwar immer noch stark an die ursprüngliche Version erinnert,
+    aber von allen Rassen nutzbar ist.<br>
+    Phonologisch besteht die Sprache aus vielen Klicklauten <!-- und Gurren-->.<br>
+    Die Sprache ist äußerst effizient für ihre Aufgabe gestaltet: Informationen übermitteln. Da sie sehr auf diese Aufgabe spezialisiert ist,
+    eignet sie sich weniger für soziale Gespräche zwischen den Kurieren <!--, weshalb diese entweder ihre natürlichen Sprachen untereinander benutzen
+    oder einen Alltagsdialekt der Kuriersprache, der sich deutlich mehr wie eine natürliche Sprache entwickelt hat-->
+
+
+    Es gibt drei Sprachen (s. <a href="./Diagramm%20Sprache.png"></a>
+    - ursprüngliche Vogelsprache, von Wer-Raben für geheime und präzise Kommunikation entwickelt
+      https://en.wikipedia.org/wiki/Minimal_pair
+      https://en.wikipedia.org/wiki/Ejective_consonant
+    - basierend auf Vogelsprache entwickelter Dialekt, der auch von anderen Rassen ausgesprochen werden kann (gleiche/ähnliche Grammatik und Schrift, andere Phonetik)
+    - "Erweiterung" des Dialekts um umgangssprachliche Wörter und Grammatik (vielleicht einige wenige Änderungen am Originaldialekt)
+    <h3 id="alltag">Alltag</h3>
+    <!--endregion-->
+    <!--region Errungenschaften-->
+    <h2 id="errungenschaften">Errungenschaften</h2>
+    <h3 id="auszeichnungen-und-ehrungen">Auszeichnungen und Ehrungen</h3>
+    <h3 id="bedeutende-errungenschaften">Bedeutende Errungenschaften</h3>
+    Gerettete Nationen: ...
+    <!--endregion-->
+    <!--region Herausforderungen und Kontroversen-->
+    <h2 id="herausforderungen-und-kontroversen">Herausforderungen und Kontroversen</h2>
+    <h3 id="interne-konflikte">Interne Konflikte</h3>
+    <h3 id="herausforderungen">Herausforderungen</h3>
+    <h3 id="skandale">Skandale</h3>
+    <h3 id="kritik">Kritik</h3>
+    <!--endregion-->
+    <!--region Pläne und Ziele-->
+    <h2 id="pläne-und-ziele">Pläne und Ziele</h2>
+    <h3 id="gegenwärtige-projekte">Gegenwärtige Projekte</h3>
+    <h3 id="zukunftsvision">Zukunftsvision</h3>
+    <!--endregion-->
+    <!--region Anhang-->
+    <h2 id="anhang">Anhang</h2>
+    <h3 id="glossar">Glossar</h3>
+    <h3 id="karten">Karten</h3>
+    <h3 id="zeitleiste">Zeitleiste</h3>
+    <!--endregion-->
+    <!--region Referenzen-->
+    <h2 id="referenzen">Referenzen</h2>
+    <h3 id="quellen">Quellen</h3>
+    <h3 id="siehe-auch">Siehe auch</h3>
+    <!--endregion-->
+</div>
+</body>
+
+<style>
+    #note {
+        width: calc(100% - 2 * 10px);
+        height: auto;
+        outline: 2px solid red;
+        font-family: monospace;
+        margin: 0;
+        padding: 10px;
+    }
+
+    #TOC {
+        border: 1px solid black;
+        padding: 10px;
+        width: 250px;
+        float: right;
+        background: #ffffff;
+        margin-left: 10px;
+    }
+
+    #image {
+        width: 30vw;
+        padding: 10px;
+        float: right;
+    }
+
+    #content {
+        overflow-wrap: anywhere;
+        text-align: justify;
+    }
+
+    body {
+        background: lightgray;
+        font-family: 'IM Fell DW Pica', sans-serif;
+    }
+</style>
