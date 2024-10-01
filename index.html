@@ -5,11 +5,19 @@
     <title>Index</title>
 </head>
 <body>
-<p><a href="main.html">Das Projekt</a></p>
-<p><a href="fonts.html">kleine Sammlung schöner Schriften</a></p>
+<div id="flex-container">
+    <a href="main.html">Das Projekt</a>
+    <a href="fonts.html">kleine Sammlung schöner Schriften</a>
+</div>
 </body>
 <style>
-    body {
+    #flex-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
         text-align: center;
     }
 </style>
