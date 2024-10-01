@@ -8,11 +8,19 @@
 </head>
 <body>
 <div id="flex-container">
-    <a href="main.html">Das Projekt</a>
-    <a href="fonts.html">kleine Sammlung schöner Schriften</a>
+    <div class="child_a"><a href="main.html">Das Projekt</a></div>
+    <div class="child_b"><a href="fonts.html">kleine Sammlung schöner Schriften</a></div>
+    <div class="child_a">Lorem ipsum</div>
+    <div class="child_b">Lorem ipsum</div>
+    <div class="child_a">Lorem ipsum</div>
+    <div class="child_b">Lorem ipsum</div>
+    <div class="child_a">Lorem ipsum</div>
 </div>
 </body>
 <style>
+    body {
+        margin: 0;
+    }
     #flex-container {
         width: 100vw;
         height: 100vh;
@@ -22,11 +30,26 @@
         align-items: center;
         text-align: center;
     }
-    #flex-container a {
+    #flex-container * {
         text-decoration: none;
-        color: black;
-        font-size: 2em;
+        color: white;
         font-family: "Benne", sans-serif;
+    }
+    .child_a, .child_b {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .child_a {
+        background: rgb(50, 50, 50);
+    }
+    .child_b {
+        background: rgb(20, 20, 20);
+    }
+    * {
+        font-size: 30pt;
     }
 </style>
 </html>
