@@ -26,3 +26,7 @@ async function showWarning(message, duration) {
         }, duration);
     }
 }
+
+window.onload = function () {
+    document.getElementById('search').value = '';
+};
