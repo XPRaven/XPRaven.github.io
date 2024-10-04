@@ -31,5 +31,33 @@
             location.href= document.getElementById('search').value + '.html'
         }
     });
+
+    function loadDocument(filename) {
+        // let encryptedFileData = fetchFile(filename);
+        // let decryptedFileData = decryptFile(encryptedFileData);
+        deletePage();
+        // insertContent(decryptedFileData);
+        insertContent(`Hallo Welt`);
+        swapStylesheet();
+    }
+
+    async function fetchFile(filename) {
+        let content;
+        fetch(filename)
+            .then((res) => res.text())
+            // .then((data) => document.body.innerHTML = data)
+            .catch((e) => console.error(e));
+    }
+    // function decryptFile() {}
+    function deletePage() {
+        document.body.innerHTML = '';
+    }
+    function insertContent(content) {
+        document.body.innerHTML = content;
+    }
+
+    function swapStylesheet(filename) {
+        document.getElementById("style").setAttribute("href", filename);
+    }
 </script>
 </html>
