@@ -35,14 +35,14 @@
             return;
         }
         try {
-            let encryptedData = await fetchFile(filename);
+            let encryptedData = await fetchFile(filename + '.html');
             let decryptedData
             if (encryptedData) {
                 decryptedData = decryptData(encryptedData);
             }
             if (decryptedData) {
                 document.body.innerHTML = decryptedData;
-                swapStylesheet(/* TODO: add new stylesheets */);
+                swapStylesheet(filename + '.css');
             }
         } catch (error) {
             console.error(error);
