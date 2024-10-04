@@ -48,8 +48,8 @@
             }
             if (decryptedData) {
                 document.body.innerHTML = decryptedData;
+                swapStylesheet();
             }
-            swapStylesheet();
         } catch (error) {
             console.error(error);
         }
