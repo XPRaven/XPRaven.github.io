@@ -20,7 +20,7 @@
     </div>
     <div>
         <label for="go">
-            <input type="button" id="go" value="Öffnen" class="IM_Fell_DW_Pica_SC" onclick="loadDocument('test')"> <!-- openFile(document.getElementById('go').value) -->
+            <input type="button" id="go" value="Öffnen" class="IM_Fell_DW_Pica_SC" onclick="loadDocument(document.getElementById('search').value)">
         </label>
     </div>
 </div>
@@ -32,30 +32,35 @@
         }
     });
 
-    function loadDocument(filename) {
-        // let encryptedFileData = fetchFile(filename);
-        // let decryptedFileData = decryptFile(encryptedFileData);
-        deletePage();
-        // insertContent(decryptedFileData);
-        insertContent(`Hallo Welt`);
-        swapStylesheet();
+    async function loadDocument(filename) {
+        try {
+            let encryptedData = await fetchFile(filename);
+            let decryptedData
+            if (encryptedData) {
+                decryptedData = decryptData(encryptedData);
+            }
+            if (decryptedData) {
+                document.body.innerHTML = decryptedData;
+            }
+            swapStylesheet();
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     async function fetchFile(filename) {
-        let content;
-        fetch(filename)
-            .then((res) => res.text())
-            // .then((data) => document.body.innerHTML = data)
-            .catch((e) => console.error(e));
-    }
-    // function decryptFile() {}
-    function deletePage() {
-        document.body.innerHTML = '';
-    }
-    function insertContent(content) {
-        document.body.innerHTML = content;
-    }
+        try {
+            const response = await fetch(filename);
 
+            if (!response.ok) {
+                throw new Error('Failed to fetch document');
+            }
+            return await response.text();
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    function decryptData(placeholder) {return placeholder}
     function swapStylesheet(filename) {
         document.getElementById("style").setAttribute("href", filename);
     }
