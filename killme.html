@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>killme</title>
+</head>
+<body>
+<button onclick="f(3)">Start</button>
+</body>
+<script>
+  async function f(a) {
+    if (a === 0) {
+      return 0;
+    } else if (a === 1) {
+      return 2;
+    } else {
+      let n = await f(f(a));
+      n += await f(n);
+      console.log(n);
+    }
+  }
+</script>
+</html>
