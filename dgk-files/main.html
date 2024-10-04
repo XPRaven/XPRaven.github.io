@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Bibliothek</title>
-<!--    TODO: favicon/s -->
+
+    <link rel="stylesheet" href="main.css" id="style">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +13,9 @@
 </head>
 <body class="IM_Fell_DW_Pica">
 <div id="center-div">
+    <div id="notice">
+        <p></p>
+    </div>
     <div>
         <label for="search">
             <input type="search" id="search">
@@ -19,47 +23,49 @@
     </div>
     <div>
         <label for="go">
-            <input type="button" id="go" value="Suchen" class="IM_Fell_DW_Pica_SC" style="font-size: 1.2em" onclick="{location.href=document.getElementById('search').value + '.html'}">
+            <input type="button" id="go" value="Öffnen" class="IM_Fell_DW_Pica_SC" onclick="loadDocument(document.getElementById('search').value)">
         </label>
     </div>
 </div>
 </body>
-<style>
-    #center-div {
-        text-align: center;
-        margin-top: 35vh;
-        margin-bottom: 65vh;
-    }
-    #search {
-        max-width: 500px;
-        width: 30vw;
-        height: 30px;
-        font-family: "IM Fell DW Pica", sans-serif;
-        font-size: 12pt
-    }
-    #search:active, #search:focus {
-        outline: 3px rgba(255, 80, 80, 1) outset;
-    }
-    #go {
-        margin-top: 5px;
-        height: 35px;
-        width: 100px;
-    }
-    body {
-        background: #313537;
-        color: lightgray;
-    }
-
-    .IM_Fell_DW_Pica {font-family: "IM Fell DW Pica", sans-serif}
-
-    .IM_Fell_DW_Pica_SC {font-family: "IM Fell DW Pica SC", sans-serif}
-</style>
-
 <script>
-    document.getElementById('search').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            location.href= document.getElementById('search').value + '.html'
+    async function loadDocument(filename) {
+        if (!filename) {
+            await showWarning('Leeres Feld', 1500);
+            return;
         }
-    });
+        try {
+            let encryptedData = await fetchFile(filename + '.html');
+            let decryptedData
+            if (encryptedData) {
+                decryptedData = decryptData(encryptedData);
+            }
+            if (decryptedData) {
+                document.body.innerHTML = decryptedData;
+                swapStylesheet(filename + '.css');
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async function fetchFile(filename) {
+        try {
+            const response = await fetch(filename);
+
+            if (!response.ok) {
+                await showWarning('Datei nicht verfügbar', 1500);
+                throw new Error('Failed to fetch document');
+            }
+            return await response.text();
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    function decryptData(placeholder) {return placeholder}
+    function swapStylesheet(filename) {
+        document.getElementById("style").setAttribute("href", filename);
+    }
 </script>
+<script src="main.js"></script>
 </html>

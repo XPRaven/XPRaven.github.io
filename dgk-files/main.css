@@ -1,0 +1,42 @@
+#center-div {
+    text-align: center;
+    margin-top: 35vh;
+}
+#notice {
+    display: none;
+    position: fixed;
+    top: 15vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 80, 80, 0.35);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+#search {
+    max-width: 500px;
+    width: 30vw;
+    height: 30px;
+    font-family: "IM Fell DW Pica", sans-serif;
+    font-size: 12pt
+}
+#search:active, #search:focus {
+    outline: 3px rgba(255, 80, 80, 1) outset;
+}
+#go {
+    margin-top: 5px;
+    height: 35px;
+    width: 100px;
+    font-size: 1.2em
+}
+body {
+    background: #313537;
+    color: lightgray;
+}
+
+.IM_Fell_DW_Pica {font-family: "IM Fell DW Pica", sans-serif}
+
+.IM_Fell_DW_Pica_SC {font-family: "IM Fell DW Pica SC", sans-serif}
