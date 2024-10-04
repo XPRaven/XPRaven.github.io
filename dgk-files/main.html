@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Bibliothek</title>
 <!--    TODO: favicon/s -->
+    <link rel="stylesheet" href="main.css" id="style">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,37 +25,6 @@
     </div>
 </div>
 </body>
-<style>
-    #center-div {
-        text-align: center;
-        margin-top: 35vh;
-        margin-bottom: 65vh;
-    }
-    #search {
-        max-width: 500px;
-        width: 30vw;
-        height: 30px;
-        font-family: "IM Fell DW Pica", sans-serif;
-        font-size: 12pt
-    }
-    #search:active, #search:focus {
-        outline: 3px rgba(255, 80, 80, 1) outset;
-    }
-    #go {
-        margin-top: 5px;
-        height: 35px;
-        width: 100px;
-    }
-    body {
-        background: #313537;
-        color: lightgray;
-    }
-
-    .IM_Fell_DW_Pica {font-family: "IM Fell DW Pica", sans-serif}
-
-    .IM_Fell_DW_Pica_SC {font-family: "IM Fell DW Pica SC", sans-serif}
-</style>
-
 <script>
     document.getElementById('search').addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
