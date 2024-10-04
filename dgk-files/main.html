@@ -29,12 +29,6 @@
 </div>
 </body>
 <script>
-    document.getElementById('search').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            location.href= document.getElementById('search').value + '.html'
-        }
-    });
-
     async function loadDocument(filename) {
         if (!filename) {
             await showWarning('Leeres Feld', 1500);
@@ -71,29 +65,6 @@
     function decryptData(placeholder) {return placeholder}
     function swapStylesheet(filename) {
         document.getElementById("style").setAttribute("href", filename);
-    }
-
-    let noticeVisible = false;
-    async function showWarning(message, duration) {
-        const box = document.getElementById('notice');
-        box.querySelector('p').textContent = message;
-
-        if (noticeVisible) {
-            box.style.background = 'rgba(255, 80, 80, 0.7)'
-            setTimeout(() => {
-                box.style.background = 'rgba(255, 80, 80, 0.35)';
-            }, 40)
-        }
-
-        if (!noticeVisible)  {
-            box.style.display = 'block';
-            noticeVisible = true;
-
-            setTimeout(() => {
-                box.style.display = 'none';
-                noticeVisible = false;
-            }, duration);
-        }
     }
 </script>
 </html>
