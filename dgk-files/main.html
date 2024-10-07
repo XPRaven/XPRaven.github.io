@@ -29,20 +29,21 @@
 </div>
 </body>
 <script>
-    async function loadDocument(filename) {
-        if (!filename) {
+    async function loadDocument(password) {
+        // Idee: Beim Laden einer neuen Seite folgende Einstellung: body * { display: none } und dann mit DOMContentLoaded wieder sichtbar machen -> kein langsames Reinladen mit barebones Links, die kurz sichtbar sind, sondern nur der Hintergrund, bis alles fertig ist. (vielleicht ein kleiner Ladekreis, solange es lädt)
+        if (!password) {
             await showWarning('Leeres Feld', 1500);
             return;
         }
         try {
-            let encryptedData = await fetchFile(filename + '.html');
+            let encryptedData = await fetchFile('file.enc');
             let decryptedData
             if (encryptedData) {
-                decryptedData = decryptData(encryptedData);
+                decryptedData = decryptData(encryptedData, password);
             }
             if (decryptedData) {
                 document.body.innerHTML = decryptedData;
-                swapStylesheet(filename + '.css');
+                // swapStylesheet(key + '.css'); // needs to be updated with the corresponding file
             }
         } catch (error) {
             console.error(error);
@@ -62,7 +63,18 @@
             console.error(error);
         }
     }
-    function decryptData(placeholder) {return placeholder}
+    async function decryptData(encryptedData, password) {
+        /* Hier der Ablauf für mein Verständnis:
+           - die Datei wird mit einem Passwort und zufälligen Salt verschlüsselt.
+           - Passwort + Salt werden gehasht und als Dateiname genutzt.
+           - bei der Entschlüsselung wird nur das Passwort eingegeben
+           - mit dem Passwort wird jeder Salt durchprobiert/gehasht, bis der Dateiname passt
+           - die richtige Datei wird vollständig entschlüsselt
+           - decryptedData wird zurückgegeben
+        */
+
+
+    }
     function swapStylesheet(filename) {
         document.getElementById("style").setAttribute("href", filename);
     }
