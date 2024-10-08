@@ -63,6 +63,7 @@
 
             if (!response.ok) {
                 showWarning('Datei nicht verfügbar', 1500).then();
+                // noinspection ExceptionCaughtLocallyJS
                 throw new Error('Failed to fetch document');
             }
             return await response.text();
