@@ -43,7 +43,7 @@
             return;
         }
         try {
-            let encryptedData = await fetchFile('file.enc');
+            let encryptedData = await fetchFile(password);
             let decryptedData
             if (encryptedData) {
                 decryptedData = decryptData(encryptedData, password);
@@ -79,8 +79,7 @@
            - die richtige Datei wird vollständig entschlüsselt
            - decryptedData wird zurückgegeben
         */
-
-
+        return encryptedData; // TODO: stand-in for functionality until encryption and decryption work
     }
     function swapStylesheet(filename) {
         document.getElementById("style").setAttribute("href", filename);
