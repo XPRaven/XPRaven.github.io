@@ -30,7 +30,7 @@
     </div>
     <div>
         <label for="go">
-            <input type="button" id="go" value="Öffnen" class="IM_Fell_DW_Pica_SC" onclick="loadDocument(document.getElementById('search').value)">
+            <input type="button" id="go" value="Öffnen" class="IM_Fell_DW_Pica_SC" onclick="await loadDocument(document.getElementById('search').value)">
         </label>
     </div>
 </div>
@@ -39,15 +39,15 @@
     async function loadDocument(password) {
         // Idee: Beim Laden einer neuen Seite folgende Einstellung: body * { display: none } und dann mit DOMContentLoaded wieder sichtbar machen -> kein langsames Reinladen mit barebones Links, die kurz sichtbar sind, sondern nur der Hintergrund, bis alles fertig ist. (vielleicht ein kleiner Ladekreis, solange es lädt)
         if (!password) {
-            await showWarning('Leeres Feld', 1500);
+            showWarning('Leeres Feld', 1500).then();
             return;
         }
         try {
-            let encryptedData = await fetchFile(password);
-            let decryptedData
-            if (encryptedData) {
-                decryptedData = decryptData(encryptedData, password);
-            }
+            let decryptedData = await fetchFile(password); // FIXME: needs to be `encryptedData`
+            // let decryptedData
+            // if (encryptedData) {
+            //     decryptedData = await decryptData(encryptedData, password);
+            // }
             if (decryptedData) {
                 document.body.innerHTML = decryptedData;
                 // swapStylesheet(key + '.css'); // needs to be updated with the corresponding file
@@ -62,7 +62,7 @@
             const response = await fetch(filename);
 
             if (!response.ok) {
-                await showWarning('Datei nicht verfügbar', 1500);
+                showWarning('Datei nicht verfügbar', 1500).then();
                 throw new Error('Failed to fetch document');
             }
             return await response.text();
