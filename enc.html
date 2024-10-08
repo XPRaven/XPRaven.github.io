@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>enc</title>
+</head>
+<body>
+<div id="center-div">
+    <input type="file" id="file-input">
+    <input type="button" value="Download .enc" id="button">
+</div>
+</body>
+<script>
+    let rawFile;
+document.getElementById("button").addEventListener("click", () => (cascade()));
+function cascade() {
+    let inputFile = document.getElementById("file-input").files[0];
+    printFile(inputFile);
+}
+
+function printFile(file) {
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+        console.log(evt.target.result);
+    };
+    reader.readAsText(file);
+}
+
+function encryptFile() {}
+</script>
+</html>
