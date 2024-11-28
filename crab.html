@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>wasm-test</title>
+</head>
+<body>
+<script type="module">
+  import init, { greet } from "./pkg/wasm_test.js";
+  init().then(() => {
+    greet("WebAssembly");
+  });
+</script>
+</body>
+</html>
