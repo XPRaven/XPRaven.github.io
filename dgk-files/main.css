@@ -1,6 +1,9 @@
 #center-div {
     text-align: center;
-    margin-top: 35vh;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #notice {
     display: none;
@@ -17,7 +20,8 @@
     z-index: 1000;
 }
 #search {
-    max-width: 500px;
+    max-width: 600px;
+    min-width: 300px;
     width: 30vw;
     height: 30px;
     font-family: "IM Fell DW Pica", sans-serif;
